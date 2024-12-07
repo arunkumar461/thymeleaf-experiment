@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="govuk-template" xmlns:th="http://www.thymeleaf.org"
-      xmlns:govUk="http://thymeleafexamples">
+      xmlns:govuk="http://thymeleafexamples">
 <head>
     <meta charset="utf-8">
     <title>GOV.UK - Customised page template</title>
@@ -34,11 +34,15 @@
 
     <p class="govuk-body"> Example 2</p>
 
-    <govUk:button name="Save and continue"/>
+    <govuk:button type="submit" disabled text="Save and continue"/>
+
+    <govuk:button type="submit" classes="govuk-button--secondary" text="Save and continue"/>
+
+    <govuk:button type="submit" th:href="@{'#'}" th:text="${text}"/>
 
     <h1 class="govuk-heading-m"> Details Component example</h1>
 
-    <govUk:details summaryText="Help with nationality"
+    <govuk:details summaryText="Help with nationality"
                    text="We need to know your nationality so we can work out which elections you're entitled to vote in."/>
 
 </main>

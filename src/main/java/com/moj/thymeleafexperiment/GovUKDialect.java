@@ -11,9 +11,8 @@ public class GovUKDialect extends AbstractProcessorDialect {
     private static final String DIALECT_NAME = "GovUKDialect";
 
     protected GovUKDialect() {
-        super(DIALECT_NAME, "govUk", StandardDialect.PROCESSOR_PRECEDENCE);
+        super(DIALECT_NAME, "govuk", StandardDialect.PROCESSOR_PRECEDENCE);
     }
-
 
     @Override
     public Set<IProcessor> getProcessors(String dialectPrefix) {

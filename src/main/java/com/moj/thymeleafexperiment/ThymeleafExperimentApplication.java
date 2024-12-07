@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.thymeleaf.spring6.SpringTemplateEngine;
 import org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver;
@@ -21,7 +22,8 @@ public class ThymeleafExperimentApplication {
     }
 
     @GetMapping("/")
-    public String test() {
+    public String test(Model model) {
+        model.addAttribute("text", "Save and continue!");
         return "index";
     }
 
